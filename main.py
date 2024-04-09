@@ -1,22 +1,37 @@
-class Car:
-  def __init__(self, make, model):
-      self.make = make
-      self.model = model
+userinput = input("Please Enter the choice number from the menu: ")
 
-# create a list of cars
-cars = []
-# add some cars to the list
-allowed_vehicles_list = ['Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan']
+allowedVehiclesList = ['Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan', 'Rivian R1T', 'RAM 1500']
 
-def find_car(make, model):
-  for car in cars:
-      if car.make == make and car.model == model:
-          return car
-  return None
+print("********************************")
+print("AutoCountry Vehicle Finder v0.3")
+print("********************************")
+print("Please Enter the following number below from the following menu:")
 
-def add_car(make, model):
-  car = find_car(make, model)
-  if car is None:
-      car = Car(make, model)
-      cars.append(car)
-  print(cars.make, cars.model)
+print("1. PRINT all Authorized Vehicles")
+print("2. SEARCH for Authorized Vehicle")
+print("3. ADD Authorized Vehicle")
+print("4. Exit")
+print("********************************")
+
+if userinput == '1':
+      print("Authorized Vehicles List:")
+      for vehicle in allowedVehiclesList:
+          print(vehicle)
+
+elif userinput == '2':
+      search_vehicle = input("Please Enter the full Vehicle name you would like to search:")
+      if search_vehicle in allowedVehiclesList:
+          print(f"{search_vehicle} is an authorized vehicle.")
+      else:
+          print(f"{search_vehicle} is not an authorized vehicle.")
+
+elif userinput == '3':
+      new_vehicle = input("Please Enter the full Vehicle name you would like to add:")
+      allowedVehiclesList.append(new_vehicle)
+      print(f"{new_vehicle} has been added to the authorized vehicles list.")
+
+elif userinput == '4':
+      print("Exiting...")
+
+else:
+      print("Invalid choice. Please select a valid option.")
