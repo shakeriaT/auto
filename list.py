@@ -38,10 +38,10 @@ elif userinput == '4':
     confirmation = input(f"Are you sure you want to remove '{remove_vehicle}' from the Authorized Vehicles List?:")
     if confirmation.lower() == 'yes':
         print(f"You have REMOVED '{remove_vehicle}' as an authorized vehicle") 
-  
+
 elif userinput == '5':
   print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
-  
+
 
 else:
       print("Invalid choice. Please select a valid option.")
