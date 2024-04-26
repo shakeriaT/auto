@@ -1,0 +1,5 @@
+event, action
+PRINT, all Authorized vehices
+SEARCH, Authorized vehicles
+ADD, authorized vehicles
+DELETE, authorized vehicles
